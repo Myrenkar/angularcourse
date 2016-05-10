@@ -1,5 +1,5 @@
 export default class GitHubController {
-  constructor(GitHubService, $stateParams) {
+  constructor(GitHubService, $stateParams, $firebaseArray) {
     
     this.selectedUser = $stateParams.user
     
@@ -9,6 +9,9 @@ export default class GitHubController {
     GitHubService.getRepos(this.selectedUser)
       .then(this.handleGetReposSuccess.bind(this));
       
+       let ref = new Firebase("https://learn11..firebaseio.com/data");
+    
+     this.items = $firebaseArray
   }
   
   handleGetUserSuccess(response) {

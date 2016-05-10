@@ -14,6 +14,7 @@ import GitHubService from './github.service';
 import githubUser from './directives/github_user';
 import userRepos from './directives/user_repos';
 import userInput from './directives/user_input';
+import githubNotes from './directives/github_notes';
 
 export default angular.module('app.github', [uirouter])
   .config(routing)
@@ -22,4 +23,5 @@ export default angular.module('app.github', [uirouter])
   .directive('githubUser', githubUser)
   .directive('userRepos', userRepos)
   .directive('userInput', userInput)
+  .directive('githubNotes', githubNotes)
   .name;
